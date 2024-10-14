@@ -1,0 +1,22 @@
+{
+  "name": "prisma-build",
+  "version": "1.0.0",
+  "description": "Demo to test Azure Ops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "prisma"
+  ],
+  "author": "Jum Ryan",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.21.1"
+  }
+}
