@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    table 
+        tr 
+            th Book 
+            th Author 
+        if (books)
+            for book in books 
+                tr 
+                    td= book.name 
+                    td= book.author.f_name
