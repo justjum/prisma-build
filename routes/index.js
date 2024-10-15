@@ -10,14 +10,21 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/books', async function(req, res, next) {
-  let books = await prisma.book.findMany({
-    include: {author: true}
-  });
-  console.log(books);
-  res.render('books', {
-    title: 'Books',
-    books: books
-  })
+  try {
+    let books = await prisma.book.findMany({
+      include: {author: true}
+    });
+    console.log(books);
+    res.render('books', {
+      title: 'Books',
+      books: books
+    })
+  } catch {
+    res.render('books', {
+      title: 'No Books'
+    })
+  }
+
 })
 
 module.exports = router;
